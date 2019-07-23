@@ -14,14 +14,19 @@ const App = () => {
   };
 
   return (
+    
     <div>
+    <SavedList list={savedList} />
         <Switch>
      <Route exact path="/" component={MovieList} />
      <Route path="/movies/:id" component={Movie} />
-     <Route path="./home/" component={SavedList} />
+
+     {/* <Route path="/movies/" component={Movie} /> */}
+     {/* <Route path="/savedlist" component={SavedList} /> */}
+
         </Switch>
 
-      <SavedList list={savedList} />
+    
     </div>
   );
 };
